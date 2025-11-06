@@ -1,0 +1,11 @@
+run:
+  containerPort: 80
+  healthCheck:
+    path: /  # Твой endpoint, который вернёт 200 + HTML
+    port: 80
+    initialDelaySeconds: 30  # Ждём npm install + listen
+    periodSeconds: 30
+    timeoutSeconds: 5
+    successThreshold: 1
+    failureThreshold: 3
+    httpGet: true  # Для HTTP, не TCP
