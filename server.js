@@ -1,6 +1,6 @@
 const http = require('http');
 
-const PORT = process.env.PORT || 8080;
+const PORT = 80;
 
 const server = http.createServer((req, res) => {
     // Устанавливаем заголовок Content-Type для отправки HTML
